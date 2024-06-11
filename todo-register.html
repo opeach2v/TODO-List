@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Register</title>
+    <link rel="stylesheet" href="css/register_style.css">
+</head>
+<body>
+    <div class="register-container">
+        <h1>회원가입</h1>
+        <form id="registerForm">
+            <div class="input-group">
+                <label for="이름">이름<strong> * </strong></label>
+                <input type="text" id="이름" name="이름" required>
+            </div>
+            <div class="input-group">
+                <label for="아이디">아이디<strong> * </strong></label>
+                <input type="text" id="아이디" name="아이디" required>
+                <button id="id-button" type="button">중복확인</button>
+            </div>
+            <div class="input-group">
+                <label for="비밀번호">비밀번호<strong> * </strong></label>
+                <input type="비밀번호" id="비밀번호" name="비밀번호" required>
+            </div>
+            <div class="input-group">
+                <label for="비밀번호">비밀번호 확인<strong> * </strong></label>
+                <input type="비밀번호" id="비밀번호 확인" name="비밀번호 확인" required>
+            </div>
+            <button type="submit">완료</button>
+        </form>
+    </div>
+    <script src="javascript/register_script.js"></script>
+</body>
+</html>
