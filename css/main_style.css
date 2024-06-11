@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F8F8F8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box1 {
+    position: relative;
+    background-color: #D6E7F7;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    width: 250px;
+    height: 665px;
+}
+
+.box2 {
+    position: absolute;
+    background-color: #D3DCF4;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    width: 250px;
+    height: 565px;
+    margin-top: 100px;
+}
+
+section {
+    background-color: #f4f4f4;
+    border-radius: 40px;
+    margin-left: 15px;
+    padding: 20px;
+    width: 800px;
+    height: 630px;
+    text-align: center;
+    align-items: right;
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: center;
+}
