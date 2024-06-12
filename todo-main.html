@@ -19,7 +19,7 @@
                 <div class="box1">
                     <div class="user">
                         <img src="사진/기본프로필.png" alt="User Icon" class="user-icon">
-                        <a href="">UserName</a>
+                        <a href="todo-user.html" onclick="window.open(this.href, '할 일 추가', 'width=500, height=700'), history.back(-1); return false;">UserName</a>
                     </div>
                     <div class="box2">
                         <div class="menu-item">
@@ -32,7 +32,7 @@
                         </div>
                         <div class="menu-item">
                             <img src="사진/캘린더.png" alt="Calendar Icon" class="menu-icon">
-                            <a href="">캘린더</a>
+                            <a href="todo-calendar.html">캘린더</a>
                         </div>
                         <hr style="border: 1.5px dashed #9473FF;">
                         <div class="menu-item">
@@ -45,7 +45,7 @@
                     </div>
                 </div>
             </nav>
-        <section>
+        <section class="section">
             <div class="main-content" id="main-content">
                 <div class="navigation-buttons">
                     <button id="prev-week" class="nav-button">이전</button>
@@ -58,6 +58,9 @@
                 </div>
             </div>
         </section>
+        <footer class="footer">
+            <p id="quote"></p>
+        </footer>
         <footer class="footer">
             <p id="quote"></p>
         </footer>

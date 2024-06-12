@@ -11,35 +11,42 @@
         <meta name="description" content>
     </head>
     <body>
-        <nav>
-            <div class="box1">
-                <div class="user">
-                    <img src="사진/기본프로필.png" alt="User Icon" class="user-icon">
-                    <a href="">UserName</a>
+        <header class="main-header">
+            <h1>To-Do List</h1>
+        </header>
+        <div class="container">
+            <nav>
+                <div class="box1">
+                    <div class="user">
+                        <img src="사진/기본프로필.png" alt="User Icon" class="user-icon">
+                        <a href="todo-user.html" onclick="window.open(this.href, '할 일 추가', 'width=500, height=700'), history.back(-1); return false;">UserName</a>
+                    </div>
+                    <div class="box2">
+                        <div class="menu-item">
+                            <img src="사진/체크.png" alt="To-Do List Icon" class="menu-icon">
+                            <a href="todo-main.html">할 일 리스트</a>
+                        </div>
+                        <div class="menu-item">
+                            <img src="사진/추가.png" alt="Add To-Do Icon" class="menu-icon">
+                            <a href="todo-addList.html" onclick="window.open(this.href, '할 일 추가', 'width=500, height=700'), history.back(-1); return false;">할 일 추가</a>
+                        </div>
+                        <div class="menu-item">
+                            <img src="사진/캘린더.png" alt="Calendar Icon" class="menu-icon">
+                            <a href="todo-calendar.html">캘린더</a>
+                        </div>
+                        <hr style="border: 1.5px dashed #9473FF;">
+                        <div class="menu-item">
+                            <img src="사진/폴더.png" alt="Document Icon" class="menu-icon">
+                            <a href="">Document</a>
+                        </div>
+                        <div class="menu-item">
+                            <button id="toggle-dark-mode" class="dark-mode-button">다크 모드</button>
+                        </div>
+                    </div>
                 </div>
-                <div class="box2">
-                    <div class="menu-item">
-                        <img src="사진/체크.png" alt="To-Do List Icon" class="menu-icon">
-                        <a href="todo-main.html">할 일 리스트</a>
-                    </div>
-                    <div class="menu-item">
-                        <img src="사진/추가.png" alt="Add To-Do Icon" class="menu-icon">
-                        <a href="todo-addList.html" onclick="window.open(this.href, '할 일 추가', 'width=500, height=700'), history.back(-1); return false;">할 일 추가</a>
-                    </div>
-                    <div class="menu-item">
-                        <img src="사진/캘린더.png" alt="Calendar Icon" class="menu-icon">
-                        <a href="todo-calendar.html">캘린더</a>
-                    </div>
-                    <hr style="border: 1.5px dashed #9473FF;">
-                    <div class="menu-item">
-                        <img src="사진/폴더.png" alt="Document Icon" class="menu-icon">
-                        <a href="">Document</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-        <section>
-            <div class="main-content">
+            </nav>
+         <section class="section">
+            <div class="main-content" id="main-content">
                 <div class="calendarBox">
                     <div id="year"></div>
                     <div id="month"></div>
@@ -47,6 +54,10 @@
                 </div>
             </div>
         </section>
+        <footer class="footer">
+            <p id="quote"></p>
+        </footer>
         <script src="javascript/calendar_script.js"></script>
+        <script src="javascript/main_script.js"></script>
     </body>
 </html>

@@ -50,7 +50,7 @@ body {
     font-size: 36px;
 }
 
-section {
+.section {
     background-color: #f4f4f4;
     border-radius: 40px;
     margin-left: 15px;
@@ -213,7 +213,11 @@ body.dark-mode {
 
 .dark-mode .main-header,
 .dark-mode .footer {
-    background-color: #282828;
+    background-color: #181818;
+}
+
+.dark-mode .section {
+    background: #282828;
 }
 
 .dark-mode .box1,
@@ -226,8 +230,19 @@ body.dark-mode {
     color: #ffffff;
 }
 
+.dark-mode .user a {
+    margin: 0;
+    text-decoration-line: none;
+    color: white;
+}
+
 .dark-mode .todo-item {
-    background-color: #3a3a3a;
+    background-color: #696969;
+}
+
+.dark-mode .main-content hr {
+    border: 1.5px solid #757575;
+    margin-top: 25px;
 }
 
 .dark-mode-button {
@@ -243,7 +258,7 @@ body.dark-mode {
 }
 
 .dark-mode-button:hover {
-    background-color: #333333;
+    background-color: #5c5c5c;
 }
 
 #quote {
@@ -291,5 +306,5 @@ body.dark-mode {
 
 .dark-mode #main-font,
 .dark-mode .date {
-    color: #3a3a3a;
+    color: white;
 }

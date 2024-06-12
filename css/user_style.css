@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.user-container {
+    background-color: #eeeaf6;
+    padding: 20px;
+    border-radius: 20px;
+    width: 400px;
+    height: 600px;
+    text-align: center;
+}
+
+.user-container h1 {
+    margin-bottom: 20px;
+    font-family: 'superB';
+}
+
+.user-container h3 {
+    font-family: 'superB';
+}
+
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'superB';
+}
+
+.input-group label strong {
+    color: red;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'superR';
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.update-button {
+    width: 30%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #80ec6a;
+    color: black;
+    font-size: 16px;
+    font-family: 'superB';
+}
+
+.update-button:hover {
+    background-color: #57a348;
+}
