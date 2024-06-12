@@ -1,3 +1,4 @@
+<!--할 일 리스트-->
 <!DOCTYPE html>
 <html lang="ko-KR">
     <head>
@@ -5,19 +6,68 @@
         <meta name="todolist" content="width=device-width, initial-scale=1.0">
         <title>To-do List</title>
         <link rel="stylesheet" href="css/main_style.css">
+        <link rel="stylesheet" href="font/fonts.css">
         <link rel="icon" href="사진/링크아이콘.png" type="image/png" sizes="16x16">
         <meta name="description" content>
     </head>
     <body>
         <nav>
             <div class="box1">
+                <div class="user">
+                    <img src="사진/기본프로필.png" alt="User Icon" class="user-icon">
+                    <p>UserName</p>
+                </div>
                 <div class="box2">
-                    <div class="input-group">
-                        
+                    <div class="menu-item">
+                        <img src="사진/체크.png" alt="To-Do List Icon" class="menu-icon">
+                        <a href="todo-main.html">할 일 리스트</a>
+                    </div>
+                    <div class="menu-item">
+                        <img src="사진/추가.png" alt="Add To-Do Icon" class="menu-icon">
+                        <a href="todo-addList.html" onclick="window.open(this.href, '_blank', 'width=400, height=600');">할 일 추가</a>
+                    </div>
+                    <div class="menu-item">
+                        <img src="사진/캘린더.png" alt="Calendar Icon" class="menu-icon">
+                        <a href="">캘린더</a>
+                    </div>
+                    <hr style="border: 1.5px dashed #9473FF;">
+                    <div class="menu-item">
+                        <img src="사진/폴더.png" alt="Document Icon" class="menu-icon">
+                        <a href="">Document</a>
                     </div>
                 </div>
             </div>
         </nav>
-        <section></section>
+        <section>
+            <div class="main-content">
+                <p id="main-font">What's To-Do?</p>
+                <hr>
+                <div class="todo-section">
+                    <div class="date">
+                        <p>2024. 06. 01</p>
+                    </div>
+                    <div class="todo-grid">
+                        <div class="todo-item">팀프로젝트 <br> ~2024 06 13</div>
+                        <div class="todo-item">밥 먹기 <br> 점심, 저녁 <br>무조건 두 끼는 먹기</div>
+                        <div class="todo-item"></div>
+                        <div class="todo-item"></div>
+                        <div class="todo-item"></div>
+                        <div class="todo-item"></div>
+                    </div>
+                    <hr>
+                    <div class="date">
+                        <p>2024. 05. 31</p>
+                    </div>
+                    <div class="todo-grid">
+                        <div class="todo-item"></div>
+                        <div class="todo-item"></div>
+                        <div class="todo-item"></div>
+                        <div class="todo-item"></div>
+                        <div class="todo-item"></div>
+                        <div class="todo-item"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </body>
 </html>
