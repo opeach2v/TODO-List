@@ -35,8 +35,6 @@ section {
     height: 630px;
     text-align: center;
     align-items: right;
-    /* 스크롤 가능하도록 */
-    overflow-y: scroll;
 }
 
 .input-group {
@@ -91,77 +89,57 @@ section {
     color: black;
 }
 
-.main-content {
-    flex-grow: 1;
-    padding: 15px;
-    overflow-y: auto;
+.calendarBox {
+    color: black;
 }
 
-.main-content hr {
+.calendarBox hr {
     border: 1.5px solid #D9D9D9;
     margin-top: 25px;
 }
 
-#main-font {
+
+/* 달력 */
+.calendarBox #month {
+    display: inline-block;
+    position: relative;
+    float: center;
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#month p {
     margin-top: 0;
     font-family: 'superB';
     font-weight: bold;
     font-size: 26px;
 }
 
-.todo-section {
-    margin-top: 5px;
-}
-
-.date {
-    margin-bottom: 10px;
-    text-align: left;
-    font-family: 'superB';
-}
-
-.todo-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-}
-
-.todo-item {
-    background-color: #E6D3F4;
-    padding: 10px;
-    border-radius: 15px;
-    text-align: center;
-    font-family: 'superR';
-}
-
-.navigation-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.nav-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    font-family: 'superB';
+.calendarBox table {
+    border-collapse: collapse;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
+    width: 100%;
 }
 
-#prev-week {
-    background-color: #007BFF;
-    color: white;
+.calendarBox th {
+    border: none;
+    height: 30px;
+    padding: 8px;
+    font-weight: normal;
+    text-align: center;
 }
 
-#prev-week:hover {
-    background-color: #0056b3;
+.calendarBox td {
+    border: none;
+    height: 70px;
+    padding: 8px;
+    text-align: center;
 }
 
-#next-week {
-    background-color: #28a745;
-    color: white;
-}
-
-#next-week:hover {
-    background-color: #218838;
+/* 오늘 날짜 배경색 지정 */
+.calendarBox #today {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10%;
+    color: black;
 }
