@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비밀번호 확인</title>
+</head>
+<body>
+    <form id="passwordForm" onsubmit="return validatePasswords()">
+        <label for="password">비밀번호:</label>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <label for="confirmPassword">비밀번호 확인:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+        
+        <button type="submit">확인</button>
+    </form>
+
+    <script>
+        function validatePasswords() {
+            var password = document.getElementById('password');
+            var confirmPassword = document.getElementById('confirmPassword');
+
+            if (password.value !== confirmPassword.value) {
+                confirmPassword.setCustomValidity('비밀번호가 일치하지 않습니다.');
+            } else {
+                confirmPassword.setCustomValidity('');
+            }
+
+            return confirmPassword.checkValidity(); // 폼 제출을 진행할지 여부를 반환
+        }
+    </script>
+</body>
+</html>

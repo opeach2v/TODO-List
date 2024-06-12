@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List Register</title>
+    <link rel="stylesheet" href="../css/register_style.css">
+    <link rel="icon" href="../사진/링크아이콘.png" type="image/png" sizes="16x16">
+</head>
+<body>
+    <div class="register-container">
+        <h1>회원가입</h1>
+        <form id="registerForm"  action="/user_create" method="POST">
+            <div class="input-group">
+                <label for="이름">이름<strong> * </strong></label>
+                <input type="text" id="이름" name="name" required>
+            </div>
+            <div class="input-group">
+                <label for="아이디">아이디<strong> * </strong></label>
+                <input type="text" id="아이디" name="id" required>
+                <button id="id-button" type="button">중복확인</button>
+            </div>
+            <div class="input-group">
+                <label for="password">비밀번호<strong> * </strong></label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="input-group">
+                <label for="confirmPassword">비밀번호 확인<strong> * </strong></label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            </div>
+            <!-- 회원가입 완료되면 그 전 로그인 창으로 돌아감 -->
+            <button type="submit">완료</button>
+        </form>
+    </div>
+    <script src="../javascript/register_script.js"></script>
+</body>
+</html>

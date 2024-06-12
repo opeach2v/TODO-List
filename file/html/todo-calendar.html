@@ -1,0 +1,66 @@
+<!-- 메인 캘린더 -->
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="todolist" content="width=device-width, initial-scale=1.0">
+        <title>To-do List</title>
+        <link rel="stylesheet" href="../css/calendar_style.css">
+        <link rel="stylesheet" href="../font/fonts.css">
+        <link rel="icon" href="../사진/링크아이콘.png" type="image/png" sizes="16x16">
+        <meta name="description" content>
+    </head>
+    <body>
+        <header class="main-header">
+            <h1>To-Do List</h1>
+        </header>
+        <div class="container">
+            <nav>
+                <div class="box1">
+                    <div class="user">
+                        <img src="../사진/기본프로필.png" alt="User Icon" class="user-icon">
+                        <a href="" onclick="window.open('todo-user.html', '할 일 추가', 'width=500, height=700');">UserName</a>
+                    </div>
+                    <div class="box2">
+                        <div class="menu-item">
+                            <img src="../사진/체크.png" alt="To-Do List Icon" class="menu-icon">
+                            <a href="todo-main.html">할 일 리스트</a>
+                        </div>
+                        <div class="menu-item">
+                            <img src="../사진/추가.png" alt="Add To-Do Icon" class="menu-icon">
+                            <a href="" onclick="window.open('todo-addList.html', '할 일 추가', 'width=500, height=700');">할 일 추가</a>
+                        </div>
+                        <div class="menu-item">
+                            <img src="../사진/캘린더.png" alt="Calendar Icon" class="menu-icon">
+                            <a href="todo-calendar.html">캘린더</a>
+                        </div>
+                        <hr style="border: 1.5px dashed #9473FF;">
+                        <div class="menu-item">
+                            <img src="../사진/폴더.png" alt="Document Icon" class="menu-icon">
+                            <a href="">Document</a>
+                        </div>
+                        <div class="menu-item">
+                            <button id="toggle-dark-mode" class="dark-mode-button">다크 모드</button>
+                        </div>
+                        <div class="menu-item">
+                            <a href="todo-login.html" style="font-size: 15px; margin-top: 300px;">로그아웃</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+         <section class="section">
+            <div class="main-content" id="main-content">
+                <div class="calendarBox">
+                    <div id="year"></div>
+                    <div id="month"></div>
+                    <div id="calendar"></div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <p id="quote"></p>
+        </footer>
+        <script src="../javascript/calendar_script.js"></script>
+        <script src="../javascript/main_script.js"></script>
+    </body>
+</html>

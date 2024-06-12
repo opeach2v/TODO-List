@@ -1,0 +1,310 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F8F8F8;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    /* 화면 전체 높이를 차지하도록 설정 */
+}
+
+.box1 {
+    position: relative;
+    background-color: #D6E7F7;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    width: 250px;
+    height: 100%;
+    /* 화면 전체 높이를 차지하도록 설정 */
+    display: flex;
+    flex-direction: column;
+}
+
+.box2 {
+    background-color: #D3DCF4;
+    border-top-right-radius: 40px;
+    border-bottom-right-radius: 40px;
+    width: 250px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+}
+
+.main-header {
+    text-align: center;
+    background-color: #F8F8F8;
+    width: 100%;
+    padding: 20px;
+    color: #9473FF;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-family: 'superB';
+    font-size: 36px;
+}
+
+.section {
+    background-color: #f4f4f4;
+    border-radius: 40px;
+    margin-left: 15px;
+    padding: 20px;
+    flex-grow: 1;
+    text-align: center;
+    align-items: right;
+    /* 스크롤 가능하도록 */
+    overflow-y: scroll;
+}
+
+.footer {
+    background-color: #b8a2ff;
+    width: 100%;
+    padding: 3px;
+    /* 높이를 줄이기 위해 패딩을 5px로 설정 */
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+
+#quote {
+    margin: 0;
+    font-size: 13px;
+}
+
+.input-group {
+    text-align: center;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'superB';
+    font-size: 20px;
+}
+
+.user a {
+    margin: 0;
+    text-decoration-line: none;
+    color: black;
+}
+
+.user-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+    margin-top: 7px;
+}
+
+.menu {
+    width: 100%;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'superB';
+    font-size: 20px;
+}
+
+.menu-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.menu-item a {
+    margin: 0;
+    text-decoration-line: none;
+    color: black;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.main-content hr {
+    border: 1.5px solid #D9D9D9;
+    margin-top: 25px;
+}
+
+#main-font {
+    margin-top: 0;
+    font-family: 'superB';
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.todo-section {
+    margin-top: 5px;
+}
+
+.date {
+    margin-bottom: 10px;
+    text-align: left;
+    font-family: 'superB';
+}
+
+.todo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.todo-item {
+    background-color: #E6D3F4;
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+    font-family: 'superR';
+}
+
+.navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav-button {
+    padding: 3px;
+    font-size: 17px;
+    font-family: 'superB';
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 70px;
+    height: 40px;
+}
+
+#prev-week {
+    background-color: #fccf9c;
+    color: black;
+}
+
+#prev-week:hover {
+    background-color: #f7a84e;
+}
+
+#next-week {
+    background-color: #9df3b1;
+    color: black;
+}
+
+#next-week:hover {
+    background-color: #3ae863;
+}
+
+body.dark-mode {
+    background-color: #181818;
+    color: #ffffff;
+}
+
+.dark-mode .main-header,
+.dark-mode .footer {
+    background-color: #181818;
+}
+
+.dark-mode .section {
+    background: #282828;
+}
+
+.dark-mode .box1,
+.dark-mode .box2 {
+    background-color: #282828;
+}
+
+.dark-mode .menu-item a,
+.dark-mode .menu-item button {
+    color: #ffffff;
+}
+
+.dark-mode .user a {
+    margin: 0;
+    text-decoration-line: none;
+    color: white;
+}
+
+.dark-mode .todo-item {
+    background-color: #696969;
+}
+
+.dark-mode .main-content hr {
+    border: 1.5px solid #757575;
+    margin-top: 25px;
+}
+
+.dark-mode-button {
+    background-color: #3a3a3a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    margin-top: auto;
+}
+
+.dark-mode-button:hover {
+    background-color: #5c5c5c;
+}
+
+#quote {
+    margin: 0;
+    font-size: 16px;
+}
+
+.nav-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'superB';
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#prev-week {
+    background-color: #007BFF;
+    color: white;
+}
+
+#prev-week:hover {
+    background-color: #0056b3;
+}
+
+#next-week {
+    background-color: #28a745;
+    color: white;
+}
+
+#next-week:hover {
+    background-color: #218838;
+}
+
+.dark-mode #prev-week,
+.dark-mode #next-week {
+    background-color: #3a3a3a;
+    color: white;
+}
+
+.dark-mode #prev-week:hover,
+.dark-mode #next-week:hover {
+    background-color: #333333;
+}
+
+.dark-mode #main-font,
+.dark-mode .date {
+    color: white;
+}

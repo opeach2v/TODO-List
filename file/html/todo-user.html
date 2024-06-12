@@ -1,0 +1,39 @@
+<!--할 일 추가-->
+<!DOCTYPE html>
+<html lang="ko-KR">
+    <head>
+        <meta charset="utf-8">
+        <meta name="todolist" content="width=device-width, initial-scale=1.0">
+        <title>To-do List</title>
+        <link rel="stylesheet" href="../css/user_style.css">
+        <link rel="stylesheet" href="../font/fonts.css">
+        <link rel="icon" href="../사진/링크아이콘.png" type="image/png" sizes="16x16">
+        <meta name="description" content>
+    </head>
+    <body>
+        <div class="user-container">
+            <h1>유저 정보</h1>
+            <hr style="border: 1px solid #cbb4fa">
+            <img src="../사진/기본프로필.png" width="150" height="150">
+            <h3 id="id">UserName</h3>
+            <form id="userForm">
+                <div class="input-group">
+                    <label for="비밀번호">현재 비밀번호<strong> * </strong></label>
+                    <input type="비밀번호" name="현재 비밀번호" required>
+                </div>
+                <div class="input-group">
+                    <label for="비밀번호">새로운 비밀번호<strong> * </strong></label>
+                    <input type="비밀번호" name="새로운 비밀번호" required>
+                </div>
+                <div class="input-group">
+                    <label for="비밀번호">새로운 비밀번호 확인<strong> * </strong></label>
+                    <input type="비밀번호" name="새로운 비밀번호 확인" required>
+                </div>
+                <div class="button-group">
+                    <button type="button" class="update-button">수정</button>
+                </div>
+            </form>
+        </div>
+        <script src="../javascript/user_script.js"></script>
+    </body>
+</html>
