@@ -89,24 +89,16 @@ section {
     color: black;
 }
 
+/* 달력 */
 .calendarBox {
     color: black;
 }
 
-.calendarBox hr {
-    border: 1.5px solid #D9D9D9;
-    margin-top: 25px;
-}
-
-
-/* 달력 */
 .calendarBox #month {
     display: inline-block;
     position: relative;
     float: center;
     margin-left: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 #month p {
@@ -114,6 +106,21 @@ section {
     font-family: 'superB';
     font-weight: bold;
     font-size: 26px;
+}
+
+.calendarBox #year {
+    display: block;
+    position: relative;
+    float: center;
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+#year p {
+    margin-top: 0;
+    font-family: 'superB';
+    font-weight: bold;
+    font-size: 15px;
 }
 
 .calendarBox table {
@@ -128,6 +135,7 @@ section {
     padding: 8px;
     font-weight: normal;
     text-align: center;
+    font-family: 'superB';
 }
 
 .calendarBox td {
@@ -135,11 +143,12 @@ section {
     height: 70px;
     padding: 8px;
     text-align: center;
+    font-family: 'superR';
 }
 
 /* 오늘 날짜 배경색 지정 */
 .calendarBox #today {
-    background-color: rgba(255, 255, 255, 0.5);
+    background-color: rgba(203, 247, 121, 0.637);
     border-radius: 10%;
     color: black;
 }

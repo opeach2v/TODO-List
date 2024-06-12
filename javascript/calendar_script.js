@@ -27,7 +27,6 @@ function printCalendar(y, m) {
     var nowY = date.getFullYear(); //현재 연도
     var nowM = date.getMonth(); //현재 월
     var nowD = date.getDate(); //현재 일
-
     //연도, 월을 입력받지 않은 경우에는 현재 날짜의 연도, 월 정보를 사용함
     y = (y != undefined) ? y : nowY;
     m = (m != undefined) ? m - 1 : nowM;
@@ -94,5 +93,18 @@ function printCalendar(y, m) {
     calendar_box.innerHTML = calendar;
 }
 
+// 년 정보 가져오기
+year = document.getElementById("year");
+function printYear() {
+    // 현재 날짜를 나타내는 Date 객체 생성
+    var currentDate = new Date();
+
+    // 현재 월 정보
+    var currentYear = currentDate.getFullYear();
+
+    year.innerHTML = "<p>" + currentYear + "</p>";
+}
+
+printYear();
 printMonth();
 printCalendar();
