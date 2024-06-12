@@ -1,15 +1,22 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const mainContent = document.getElementById('main-content');
     const todoSection = document.getElementById('todo-section');
     const prevWeekButton = document.getElementById('prev-week');
     const nextWeekButton = document.getElementById('next-week');
 
     let currentDate = new Date();
 
+    function formatDate(date) {
+        return date.toLocaleDateString('ko-KR', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit'
+        });
+    }
+
     function addTodoSection(date) {
         const dateDiv = document.createElement('div');
         dateDiv.className = 'date';
-        dateDiv.textContent = date.toISOString().split('T')[0];
+        dateDiv.textContent = formatDate(date);
 
         const todoGrid = document.createElement('div');
         todoGrid.className = 'todo-grid';
