@@ -1,20 +1,22 @@
-function validatePasswords() {
+document.getElementById('registerForm').addEventListener('submit', function (event) {
     let password = document.getElementById('password').value;
     let confirmPassword = document.getElementById('confirmPassword').value;
 
     if (password !== confirmPassword) {
         document.getElementById('confirmPassword').setCustomValidity('비밀번호가 일치하지 않습니다.');
-        return false; // 폼 제출을 막습니다.
+        event.preventDefault(); // 폼 제출을 막습니다.
+    } else {
+        document.getElementById('confirmPassword').setCustomValidity(''); // 에러 메시지를 초기화합니다.
+
+        var formData = new FormData();
+        formData.append('name', document.getElementById('이름').value);
+        formData.append('id', document.getElementById('아이디').value);
+        formData.append('password', password);
+
+        // HTTP POST 요청 보내기
+        sendFormData(formData);
     }
-    var formData = new FormData();
-    formData.append('name', document.getElementById('이름').value);
-    formData.append('id', document.getElementById('아이디').value);
-    formData.append('password', password);
-
-    // HTTP POST 요청 보내기
-    sendFormData(formData);
-
-}
+});
 
 function sendFormData(formData) {
     fetch('/user_create', {
