@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function () {
         "성공은 준비된 자에게 기회가 찾아왔을 때 이루어진다. - 조지 S. 클라슨",
         "내 과제인생에서 이렇게 많은 터미널 화면을 볼 줄은 몰랐어. -안채은",
         "디자인이 제일 재밌었다. -장슬기",
-        "지렁이도 꿈틀댈 수 있다는걸 보여주는중 -윤지호"
+        "지렁이도 꿈틀댈 수 있다는걸 보여주는 중. -윤지호"
     ];
 
     function displayRandomQuote() {
@@ -155,8 +155,29 @@ document.addEventListener('DOMContentLoaded', function () {
             if (data.id) {
                 document.getElementById('id').textContent = data.id;
             } else {
-                alert('Unauthorized access. Please log in.');
+                alert('세션 만료. 다시 로그인하세요.');
                 window.location.href = 'todo-login.html';
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+});
+
+document.getElementById('logout').addEventListener('click', function () {
+    fetch('/logout', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert('Logged out successfully.');
+                window.location.href = 'todo-login.html';
+            } else {
+                alert('Logout failed.');
             }
         })
         .catch(error => {

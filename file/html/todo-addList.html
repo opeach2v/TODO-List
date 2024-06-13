@@ -13,7 +13,7 @@
     <body>
         <div class="addList-container">
             <h1>할 일 추가</h1>
-            <form id="addListForm">
+            <form id="addListForm" action="/add-todo" method="POST">
                 <div class="input-group">
                     <label for="날짜">추가할 날짜<strong> * </strong></label>
                     <input type="date" id="date" name="date" required>
@@ -38,7 +38,7 @@
                     <input type="text" id="메모" name="메모" style="height: 180px;">
                 </div>
                 <div class="button-group">
-                    <button type="button" class="save-button">저장</button>
+                    <button type="submit" class="save-button" id="save-button">저장</button>
                     <button type="button" class="delete-button">삭제</button>
                 </div>
             </form>

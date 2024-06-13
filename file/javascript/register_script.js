@@ -28,7 +28,7 @@ function sendFormData(formData) {
             return response.text();
         })
         .then(data => {
-            console.log('PHP에서 받은 응답:', data);
+            console.log('받은 응답:', data);
             // 원하는 작업을 수행 (예: 응답 처리)
         })
         .catch(error => {

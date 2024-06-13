@@ -93,6 +93,30 @@ app.get('/user', (req, res) => {
     }
 });
 
+// 로그아웃 요청 처리
+app.post('/logout', (req, res) => {
+    req.session.destroy((err) => {
+        if (err) {
+            return res.status(500).json({ success: false, message: 'Failed to logout' });
+        }
+        res.json({ success: true });
+    });
+});
+
+// 할 일 추가
+app.post('/add-todo', (req, res) => {
+    const { date, title, cate } = req.body;
+    const sql = 'INSERT INTO todo_list VALUES (?, ?, ?)';
+    db.query(sql, [date, title, cate], (err, result) => {
+        if (err) {
+            console.error('할 일 추가 저장에서 에러:', err.stack);
+            res.status(500).send('할 일 추가 저장에서 에러');
+            return;
+        }
+        console.log('할 일 추가 완료:', result);
+    });
+});
+
 app.get('/todo-login.html', function (req, res) {
     res.sendFile(__dirname + "/file/html/todo-login.html")
 })
